@@ -118,7 +118,7 @@ Do not use markdown symbols like asterisks or bullet points because your text wi
     history.push({ role: 'user', parts: [{ text: userText }] });
 
     try {
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${encodeURIComponent(apiKey)}`, {
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -161,7 +161,7 @@ Do not use markdown symbols like asterisks or bullet points because your text wi
       askGemini(transcript);
     };
     recognition.onerror = (event) => {
-      isListening = false;
+      isListening, false;
       micBtn.classList.remove('listening');
       statusEl.textContent = event.error === 'no-speech' ? 'Ovoz eshitilmadi, qayta bosing' : 'Mikrofon xatosi: ' + event.error;
     };
