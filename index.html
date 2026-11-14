@@ -161,7 +161,7 @@ Do not use markdown symbols like asterisks or bullet points because your text wi
       askGemini(transcript);
     };
     recognition.onerror = (event) => {
-      isListening, false;
+      isListening = false;
       micBtn.classList.remove('listening');
       statusEl.textContent = event.error === 'no-speech' ? 'Ovoz eshitilmadi, qayta bosing' : 'Mikrofon xatosi: ' + event.error;
     };
